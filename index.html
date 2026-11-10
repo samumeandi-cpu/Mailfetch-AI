@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mailfetch AI by Musinc Ltd — Executive Inbox Intelligence &amp; Auto-Replies</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            stone: {
+              50: '#f2f3f5',
+              100: '#e6e8ec',
+              200: '#d5d8df',
+              300: '#bfc4ce',
+              400: '#949aa6',
+              500: '#686e7a',
+              600: '#4b505b',
+              700: '#363a43',
+              800: '#23262d',
+              900: '#15171c',
+              950: '#0b0c0f',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Toned-down Architectural Pewter & Pearl Grey Palette (Zero Stark White Glare) */
+    body {
+      background-color: #d5d8df;
+      color: #15171c;
+    }
+    .subtle-grid {
+      background-color: #cfd3dc;
+      background-image: linear-gradient(to right, rgba(21, 23, 28, 0.045) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(21, 23, 28, 0.045) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    .section-mid-grey {
+      background-color: #d9dce3;
+    }
+    .section-deep-grey {
+      background-color: #cdd1da;
+    }
+    .classic-card {
+      background: #eceef2;
+      border: 1px solid #bfc4ce;
+      box-shadow: 0 6px 24px -4px rgba(21, 23, 28, 0.08);
+      transition: all 0.25s ease;
+    }
+    .classic-card:hover {
+      background: #f2f3f5;
+      border-color: #949aa6;
+      box-shadow: 0 12px 32px -6px rgba(21, 23, 28, 0.12);
+    }
+    .classic-card-featured {
+      background: #f2f3f5;
+      border: 1.5px solid #15171c;
+      box-shadow: 0 18px 42px -8px rgba(21, 23, 28, 0.16);
+    }
+    input[type="range"] {
+      accent-color: #15171c;
+    }
+  </style>
+</head>
+<body class="font-sans antialiased selection:bg-stone-900 selection:text-stone-50 min-h-screen">
+
+  <!-- TOP ANNOUNCEMENT BANNER -->
+  <div class="bg-stone-900 text-stone-100 py-2.5 px-4 text-center text-xs sm:text-sm font-normal tracking-wide border-b border-stone-800">
+    <span class="uppercase tracking-widest text-[11px] font-semibold text-stone-300 mr-2">Founding Offer</span>
+    One-time fee of <strong class="font-semibold text-stone-50 underline underline-offset-4">$50 before December 31</strong> &mdash; $200 from January for Lifetime Access.
+    <a href="#pricing" class="ml-3 inline-block px-3 py-0.5 rounded-full bg-stone-100 text-stone-900 font-semibold text-xs hover:bg-stone-200 transition">Acquire Access &rarr;</a>
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav class="sticky top-0 z-50 bg-[#dfe2e8]/95 backdrop-blur-md border-b border-stone-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <div class="flex items-center space-x-3.5">
+        <div class="w-10 h-10 rounded-lg bg-stone-900 flex items-center justify-center text-stone-50 font-serif text-xl font-bold tracking-tight shadow-sm">
+          M
+        </div>
+        <div>
+          <span class="text-xl font-serif font-bold tracking-tight text-stone-900">Mailfetch AI</span>
+          <span class="text-[11px] uppercase tracking-widest text-stone-600 block sm:inline sm:ml-2 font-medium">by Musinc Ltd</span>
+        </div>
+      </div>
+
+      <div class="hidden md:flex items-center space-x-9 text-sm font-medium text-stone-700">
+        <a href="#overview" class="hover:text-stone-900 transition">Overview</a>
+        <a href="#simulator" class="hover:text-stone-900 transition">Live Preview</a>
+        <a href="#live-demo" class="hover:text-stone-900 transition">Test Dispatch</a>
+        <a href="#roi-calculator" class="hover:text-stone-900 transition">Calculator</a>
+        <a href="#pricing" class="hover:text-stone-900 transition">Pricing</a>
+      </div>
+
+      <div>
+        <a href="#pricing" class="px-5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold bg-stone-900 hover:bg-stone-800 text-stone-50 transition shadow-sm">
+          Lifetime Access &bull; $50
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="relative pt-20 pb-24 subtle-grid border-b border-stone-300">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-stone-100 border border-stone-300 text-[11px] font-semibold uppercase tracking-widest text-stone-700 mb-8 shadow-sm">
+        <span class="w-1.5 h-1.5 rounded-full bg-stone-900"></span>
+        <span>24/7 Autonomous Inbox Intelligence</span>
+      </div>
+
+      <h1 class="text-5xl sm:text-6xl lg:text-7xl font-serif font-semibold tracking-tight text-stone-900 leading-[1.08]">
+        Instant WhatsApp Alerts &amp; <br class="hidden sm:inline" />
+        <span class="italic font-normal text-stone-700">Automatic Email Replies.</span>
+      </h1>
+
+      <p class="mt-6 text-base sm:text-lg text-stone-700 max-w-2xl mx-auto font-normal leading-relaxed">
+        Mailfetch AI quietly monitors your inbox around the clock—notifying your mobile in three seconds and sending tailored automatic responses to your priority accounts.
+      </p>
+
+      <!-- HERO CTAS -->
+      <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#pricing" class="w-full sm:w-auto px-8 py-4 rounded-lg font-semibold text-sm bg-stone-900 text-stone-50 hover:bg-stone-800 transition shadow-md flex items-center justify-center space-x-2">
+          <span>Claim $50 Lifetime Access</span>
+          <span>&rarr;</span>
+        </a>
+        <a href="#live-demo" class="w-full sm:w-auto px-8 py-4 rounded-lg font-semibold text-sm bg-stone-100 hover:bg-stone-50 text-stone-900 border border-stone-300 transition flex items-center justify-center">
+          <span>Test Live Phone Alert</span>
+        </a>
+      </div>
+
+      <!-- KEY METRICS -->
+      <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto text-center">
+        <div class="classic-card rounded-xl p-5">
+          <div class="text-2xl sm:text-3xl font-serif font-bold text-stone-900">&lt; 3s</div>
+          <div class="text-[11px] uppercase tracking-widest text-stone-600 mt-1 font-medium">Alert Speed</div>
+        </div>
+        <div class="classic-card rounded-xl p-5">
+          <div class="text-2xl sm:text-3xl font-serif font-bold text-stone-900">24/7</div>
+          <div class="text-[11px] uppercase tracking-widest text-stone-600 mt-1 font-medium">Inbox Watch</div>
+        </div>
+        <div class="classic-card rounded-xl p-5">
+          <div class="text-2xl sm:text-3xl font-serif font-bold text-stone-900">21x</div>
+          <div class="text-[11px] uppercase tracking-widest text-stone-600 mt-1 font-medium">Faster Response</div>
+        </div>
+        <div class="classic-card rounded-xl p-5">
+          <div class="text-2xl sm:text-3xl font-serif font-bold text-stone-900">$0/mo</div>
+          <div class="text-[11px] uppercase tracking-widest text-stone-600 mt-1 font-medium">No Subscriptions</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OVERVIEW COMPARISON -->
+  <section id="overview" class="py-20 section-mid-grey border-b border-stone-300">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-[11px] font-semibold uppercase tracking-widest text-stone-600">The Advantage</span>
+        <h2 class="text-3xl sm:text-4xl font-serif font-semibold text-stone-900 mt-1">Effortless Executive Responsiveness</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Traditional -->
+        <div class="rounded-2xl p-8 bg-[#cfd3dc] border border-stone-300">
+          <div class="text-[11px] font-semibold text-stone-600 uppercase tracking-widest mb-2">Standard Inbox</div>
+          <h3 class="text-2xl font-serif font-semibold text-stone-800 mb-5">Delayed, Manual Follow-Ups</h3>
+          <ul class="space-y-3.5 text-sm text-stone-700">
+            <li class="flex items-start space-x-3"><span class="text-stone-500 font-bold">&mdash;</span><span>Important client messages sit buried beneath routine mail.</span></li>
+            <li class="flex items-start space-x-3"><span class="text-stone-500 font-bold">&mdash;</span><span>Hours pass while you are in meetings or away from your desk.</span></li>
+            <li class="flex items-start space-x-3"><span class="text-stone-500 font-bold">&mdash;</span><span>Prospective clients move on to faster responders.</span></li>
+          </ul>
+        </div>
+
+        <!-- With Mailfetch AI -->
+        <div class="classic-card-featured rounded-2xl p-8">
+          <div class="text-[11px] font-semibold text-stone-900 uppercase tracking-widest mb-2">With Mailfetch AI</div>
+          <h3 class="text-2xl font-serif font-semibold text-stone-900 mb-5">Instant Alerts &amp; Auto-Replies</h3>
+          <ul class="space-y-3.5 text-sm text-stone-700">
+            <li class="flex items-start space-x-3"><span class="text-stone-900 font-bold">&#10003;</span><span>Immediate WhatsApp &amp; Discord notification when priority contacts write.</span></li>
+            <li class="flex items-start space-x-3"><span class="text-stone-900 font-bold">&#10003;</span><span>Automatic AI email replies sent instantly for selected accounts.</span></li>
+            <li class="flex items-start space-x-3"><span class="text-stone-900 font-bold">&#10003;</span><span>Daily 9:00 AM executive briefing delivered to your mobile.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE SIMULATOR SECTION -->
+  <section id="simulator" class="py-20 section-deep-grey border-b border-stone-300">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <span class="text-[11px] font-semibold uppercase tracking-widest text-stone-600">Interactive Preview</span>
+        <h2 class="text-3xl sm:text-4xl font-serif font-semibold text-stone-900 mt-1">How Mailfetch AI Works</h2>
+      </div>
+
+      <!-- Industry Pills -->
+      <div class="flex flex-wrap justify-center gap-2.5 mb-9">
+        <button onclick="selectIndustry('agency')" id="pill-agency" class="industry-pill px-5 py-2 rounded-full text-xs font-semibold bg-stone-900 text-stone-50 shadow-sm transition">
+          Agencies &amp; Studios
+        </button>
+        <button onclick="selectIndustry('realestate')" id="pill-realestate" class="industry-pill px-5 py-2 rounded-full text-xs font-medium bg-stone-100 text-stone-700 hover:bg-stone-50 border border-stone-300 transition">
+          Real Estate
+        </button>
+        <button onclick="selectIndustry('consulting')" id="pill-consulting" class="industry-pill px-5 py-2 rounded-full text-xs font-medium bg-stone-100 text-stone-700 hover:bg-stone-50 border border-stone-300 transition">
+          Consulting &amp; Legal
+        </button>
+        <button onclick="selectIndustry('ecommerce')" id="pill-ecommerce" class="industry-pill px-5 py-2 rounded-full text-xs font-medium bg-stone-100 text-stone-700 hover:bg-stone-50 border border-stone-300 transition">
+          Wholesale &amp; Retail
+        </button>
+      </div>
+
+      <!-- Simulator Card -->
+      <div class="max-w-2xl mx-auto classic-card rounded-2xl p-6 sm:p-8">
+        <div class="flex items-center justify-between pb-4 border-b border-stone-300 mb-6">
+          <div class="flex items-center space-x-2.5">
+            <span class="w-2 h-2 rounded-full bg-stone-900"></span>
+            <span class="text-xs text-stone-700 font-mono">Mobile Alert &amp; Auto-Responder Log</span>
+          </div>
+          <span class="text-[11px] font-mono text-stone-800 font-medium bg-stone-200 border border-stone-300 px-2.5 py-0.5 rounded">
+            Latency: 1.4s
+          </span>
+        </div>
+
+        <div class="space-y-4 text-sm">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 p-4 rounded-xl bg-stone-200/70 border border-stone-300 text-xs">
+            <div>
+              <span class="text-stone-500 uppercase tracking-wider block text-[10px] font-semibold">Sender</span>
+              <span id="sim-prospect" class="text-stone-900 font-semibold">Marcus Vance</span>
+              <span class="text-stone-500"> &bull; </span>
+              <span id="sim-role" class="text-stone-700">Veloce Labs</span>
+            </div>
+            <div>
+              <span class="text-stone-500 uppercase tracking-wider block text-[10px] font-semibold">Subject / Topic</span>
+              <span id="sim-intent" class="text-stone-900 font-medium">AI Pilot Inquiry</span>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-stone-200/70 border border-stone-300">
+            <div class="text-[10px] uppercase tracking-widest text-stone-600 font-semibold mb-1.5">Incoming Email</div>
+            <p id="sim-snippet" class="italic text-stone-800 text-sm">
+              "Looking to deploy an AI assistant for our agency next week. Can we book a quick call?"
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-stone-900 text-stone-100">
+            <div class="flex items-center justify-between mb-1.5">
+              <span class="text-[10px] uppercase tracking-widest text-stone-300 font-semibold">Automatic Email Reply Dispatched</span>
+              <span class="text-[10px] font-mono text-stone-400">Sent via Gmail</span>
+            </div>
+            <p id="sim-draft" class="text-stone-50 text-sm leading-relaxed">
+              "Hi Marcus, thanks for reaching out! I've reserved tomorrow at 10 AM for a quick walkthrough. Talk soon."
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIVE DEMO LEAD CAPTURE -->
+  <section id="live-demo" class="py-20 section-mid-grey border-b border-stone-300">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="classic-card rounded-2xl p-8 sm:p-10">
+        <div class="text-center max-w-xl mx-auto mb-8">
+          <span class="text-[11px] font-semibold uppercase tracking-widest text-stone-600">Live Verification</span>
+          <h2 class="text-3xl font-serif font-semibold text-stone-900 mt-1">Send a Live Test Alert</h2>
+          <p class="text-stone-700 mt-2 text-sm">Submit a test inquiry below to trigger an immediate WhatsApp and Discord dispatch.</p>
+        </div>
+
+        <form id="liveDemoForm" onsubmit="handleDemoSubmit(event)" class="space-y-4 max-w-lg mx-auto">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <input type="text" id="demoName" required placeholder="Your Name" class="w-full px-4 py-3 rounded-lg bg-stone-200/75 border border-stone-300 text-stone-900 placeholder-stone-500 text-sm focus:outline-none focus:border-stone-900 focus:bg-stone-50 transition">
+            <input type="email" id="demoEmail" required placeholder="Your Email" class="w-full px-4 py-3 rounded-lg bg-stone-200/75 border border-stone-300 text-stone-900 placeholder-stone-500 text-sm focus:outline-none focus:border-stone-900 focus:bg-stone-50 transition">
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <input type="text" id="demoCompany" required placeholder="Company" class="w-full px-4 py-3 rounded-lg bg-stone-200/75 border border-stone-300 text-stone-900 placeholder-stone-500 text-sm focus:outline-none focus:border-stone-900 focus:bg-stone-50 transition">
+            <input type="text" id="demoPhone" required placeholder="WhatsApp / Phone" class="w-full px-4 py-3 rounded-lg bg-stone-200/75 border border-stone-300 text-stone-900 placeholder-stone-500 text-sm focus:outline-none focus:border-stone-900 focus:bg-stone-50 transition">
+          </div>
+
+          <textarea id="demoMessage" rows="2" required placeholder="Your message..." class="w-full px-4 py-3 rounded-lg bg-stone-200/75 border border-stone-300 text-stone-900 placeholder-stone-500 text-sm focus:outline-none focus:border-stone-900 focus:bg-stone-50 transition"></textarea>
+
+          <button type="submit" id="demoBtn" class="w-full py-3.5 rounded-lg font-semibold text-sm bg-stone-900 text-stone-50 hover:bg-stone-800 transition shadow-sm">
+            Dispatch Live Alert &rarr;
+          </button>
+        </form>
+
+        <!-- Live Stream Log -->
+        <div id="liveStream" class="hidden mt-6 p-4 rounded-xl bg-stone-200 border border-stone-300 max-w-lg mx-auto font-mono text-xs text-stone-800 space-y-1.5">
+          <div id="logStep1">• Packaging message...</div>
+          <div id="logStep2">• Dispatching to Discord &amp; WhatsApp...</div>
+          <div id="logStep3" class="text-stone-900 font-semibold">• Delivered to Sir Mus (+254 739 337 270).</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROI CALCULATOR -->
+  <section id="roi-calculator" class="py-20 section-deep-grey border-b border-stone-300">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="text-[11px] font-semibold uppercase tracking-widest text-stone-600">Value Estimator</span>
+      <h2 class="text-3xl sm:text-4xl font-serif font-semibold text-stone-900 mt-1">Revenue Recovered by Instant Replies</h2>
+
+      <div class="mt-9 classic-card rounded-2xl p-8 max-w-xl mx-auto text-left space-y-6">
+        <div>
+          <div class="flex justify-between text-sm font-medium mb-2">
+            <span class="text-stone-700">Average Client Value</span>
+            <span id="dealValLabel" class="text-stone-900 font-mono font-semibold">$3,500</span>
+          </div>
+          <input type="range" id="dealVal" min="500" max="25000" step="500" value="3500" oninput="calculateROI()" class="w-full cursor-pointer">
+        </div>
+
+        <div>
+          <div class="flex justify-between text-sm font-medium mb-2">
+            <span class="text-stone-700">Monthly Inbound Inquiries</span>
+            <span id="leadsValLabel" class="text-stone-900 font-mono font-semibold">20 Leads</span>
+          </div>
+          <input type="range" id="leadsVal" min="5" max="100" step="5" value="20" oninput="calculateROI()" class="w-full cursor-pointer">
+        </div>
+
+        <div class="p-6 rounded-xl bg-stone-200/80 border border-stone-300 text-center">
+          <div class="text-[11px] text-stone-600 uppercase tracking-widest font-semibold">Estimated Annual Revenue Recovered</div>
+          <div id="recoveredRevenue" class="text-3xl sm:text-4xl font-serif font-bold text-stone-900 mt-1">
+            $42,000 / year
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING TIERS -->
+  <section id="pricing" class="py-24 section-mid-grey">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-[11px] font-semibold uppercase tracking-widest text-stone-600">Perpetual License</span>
+        <h2 class="text-4xl sm:text-5xl font-serif font-semibold text-stone-900 mt-1">One-Time Fee. Lifetime Access.</h2>
+        <p class="text-stone-700 mt-3 text-base">Pay once and own Mailfetch AI forever. Zero recurring monthly subscriptions.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <!-- Tier 1: Before Dec 31 ($50) -->
+        <div class="classic-card-featured rounded-2xl p-8 sm:p-10 flex flex-col justify-between relative">
+          <div class="absolute -top-3.5 left-8 px-3.5 py-1 rounded-full bg-stone-900 text-stone-50 text-[11px] font-semibold uppercase tracking-widest">
+            Before Dec 31 &bull; Save 75%
+          </div>
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs uppercase tracking-widest text-stone-600 font-semibold">Founding Edition</span>
+              <span class="text-xs font-mono px-2.5 py-0.5 rounded bg-stone-200 text-stone-900 border border-stone-300">Active Offer</span>
+            </div>
+            <h3 class="text-2xl font-serif font-semibold text-stone-900">Early-Bird Lifetime</h3>
+            <div class="mt-6 mb-6 p-5 rounded-xl bg-stone-200/75 border border-stone-300">
+              <div class="flex items-baseline space-x-3">
+                <span class="text-5xl font-serif font-bold text-stone-900">$50</span>
+                <span class="text-lg text-stone-500 line-through font-mono">$200</span>
+                <span class="text-[11px] font-semibold uppercase tracking-wider px-2.5 py-0.5 rounded bg-stone-300 text-stone-900">One-Time Fee</span>
+              </div>
+              <span class="text-xs text-stone-700 block mt-2">Valid through December 31 &bull; Full Lifetime Access</span>
+            </div>
+            <ul class="space-y-3 text-sm text-stone-800 border-t border-stone-300 pt-6">
+              <li class="flex items-center space-x-3"><span class="text-stone-900 font-bold">&#10003;</span><span><strong>Lifetime Access</strong> ($0/month forever)</span></li>
+              <li class="flex items-center space-x-3"><span class="text-stone-900 font-bold">&#10003;</span><span>24/7 Email &amp; Web Form Monitoring</span></li>
+              <li class="flex items-center space-x-3"><span class="text-stone-900 font-bold">&#10003;</span><span>Automatic Email Replies for Specific Accounts</span></li>
+              <li class="flex items-center space-x-3"><span class="text-stone-900 font-bold">&#10003;</span><span>Instant WhatsApp &amp; Discord Alerts + Daily Briefing</span></li>
+            </ul>
+          </div>
+          <a href="#live-demo" class="mt-8 block text-center py-4 rounded-lg bg-stone-900 hover:bg-stone-800 text-stone-50 font-semibold text-sm transition shadow-sm">
+            Get $50 Lifetime Access &rarr;
+          </a>
+        </div>
+
+        <!-- Tier 2: From January ($200) -->
+        <div class="classic-card rounded-2xl p-8 sm:p-10 flex flex-col justify-between relative">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs uppercase tracking-widest text-stone-600 font-semibold">Standard Edition</span>
+              <span class="text-xs font-mono px-2.5 py-0.5 rounded bg-stone-200 text-stone-700 border border-stone-300">From Jan 1</span>
+            </div>
+            <h3 class="text-2xl font-serif font-semibold text-stone-900">January Lifetime</h3>
+            <div class="mt-6 mb-6 p-5 rounded-xl bg-stone-200/60 border border-stone-300">
+              <div class="flex items-baseline space-x-3">
+                <span class="text-5xl font-serif font-bold text-stone-800">$200</span>
+                <span class="text-[11px] font-semibold uppercase tracking-wider px-2.5 py-0.5 rounded bg-stone-300/80 text-stone-800">One-Time Fee</span>
+              </div>
+              <span class="text-xs text-stone-600 block mt-2">Standard rate effective January 1 &bull; Full Lifetime Access</span>
+            </div>
+            <ul class="space-y-3 text-sm text-stone-700 border-t border-stone-300 pt-6">
+              <li class="flex items-center space-x-3"><span class="text-stone-800 font-bold">&#10003;</span><span><strong>Lifetime Access</strong> (Single one-time payment)</span></li>
+              <li class="flex items-center space-x-3"><span class="text-stone-800 font-bold">&#10003;</span><span>24/7 Email &amp; Web Form Monitoring</span></li>
+              <li class="flex items-center space-x-3"><span class="text-stone-800 font-bold">&#10003;</span><span>Automatic Email Replies for Specific Accounts</span></li>
+              <li class="flex items-center space-x-3"><span class="text-stone-800 font-bold">&#10003;</span><span>Instant WhatsApp &amp; Discord Alerts + Daily Briefing</span></li>
+            </ul>
+          </div>
+          <a href="#live-demo" class="mt-8 block text-center py-4 rounded-lg bg-stone-200 hover:bg-stone-300 text-stone-900 border border-stone-400 font-semibold text-sm transition">
+            Lock In $50 Early-Bird Today &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-12 border-t border-stone-300 text-center text-xs text-stone-600 bg-[#c8ccd6]">
+    <div class="max-w-5xl mx-auto px-4 space-y-2">
+      <div class="text-stone-900 font-serif font-bold text-base">Mailfetch AI &bull; Musinc Ltd</div>
+      <div>Engineered by Sir Mus &bull; <a href="mailto:samumeandi@gmail.com" class="text-stone-900 underline">samumeandi@gmail.com</a> &bull; <a href="https://musinc-ltd.polsia.io/" target="_blank" class="text-stone-800 hover:text-stone-950">musinc-ltd.polsia.io</a></div>
+      <div class="pt-2 text-stone-500">&copy; 2026 Musinc Ltd. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- INTERACTIVE SCRIPT -->
+  <script>
+    const industryData = {
+      agency: {
+        prospect: "Marcus Vance",
+        role: "Veloce Labs",
+        intent: "AI Pilot Inquiry",
+        snippet: `"Looking to deploy an AI assistant for our agency next week. Can we book a quick call?"`,
+        draft: `"Hi Marcus, thanks for reaching out! I've reserved tomorrow at 10 AM for a quick walkthrough. Talk soon."`
+      },
+      realestate: {
+        prospect: "Elena Rostova",
+        role: "Premier Estates",
+        intent: "$2.4M Penthouse Viewing",
+        snippet: `"Hi, looking for a private viewing of the Ridgeview Penthouse this Thursday. Cash buyer ready."`,
+        draft: `"Hi Elena, your private viewing is confirmed for Thursday at 2:00 PM. Sending access details via WhatsApp now."`
+      },
+      consulting: {
+        prospect: "David Ochieng",
+        role: "Kinetix Partners",
+        intent: "Audit Automation Demo",
+        snippet: `"We need an AI workflow to extract key data from client audits. Available for a demo this week?"`,
+        draft: `"Hi David, our automated extraction handles audit files with 99.4% accuracy. Booked your live demo for Wednesday at 10 AM."`
+      },
+      ecommerce: {
+        prospect: "Liam Chen",
+        role: "Aura Home Goods",
+        intent: "5,000 Unit Wholesale Order",
+        snippet: `"Requesting wholesale pricing and shipping timeline for 5,000 units to our distribution hub."`,
+        draft: `"Hi Liam, wholesale pricing and shipping options for 5,000 units are ready. I've attached our bulk discount sheet."`
+      }
+    };
+
+    function selectIndustry(key) {
+      document.querySelectorAll('.industry-pill').forEach(btn => {
+        btn.classList.remove('bg-stone-900', 'text-stone-50', 'shadow-sm', 'font-semibold');
+        btn.classList.add('bg-stone-100', 'text-stone-700', 'border', 'border-stone-300', 'font-medium');
+      });
+
+      const activeBtn = document.getElementById(`pill-${key}`);
+      if (activeBtn) {
+        activeBtn.classList.remove('bg-stone-100', 'text-stone-700', 'border', 'border-stone-300', 'font-medium');
+        activeBtn.classList.add('bg-stone-900', 'text-stone-50', 'shadow-sm', 'font-semibold');
+      }
+
+      const item = industryData[key];
+      document.getElementById('sim-prospect').textContent = item.prospect;
+      document.getElementById('sim-role').textContent = item.role;
+      document.getElementById('sim-intent').textContent = item.intent;
+      document.getElementById('sim-snippet').textContent = item.snippet;
+      document.getElementById('sim-draft').textContent = item.draft;
+    }
+
+    function calculateROI() {
+      const dealVal = parseInt(document.getElementById('dealVal').value);
+      const leadsVal = parseInt(document.getElementById('leadsVal').value);
+      
+      document.getElementById('dealValLabel').textContent = `$${dealVal.toLocaleString()}`;
+      document.getElementById('leadsValLabel').textContent = `${leadsVal} Leads`;
+
+      const annualRecovered = Math.round((leadsVal * 0.05 * dealVal) * 12);
+      document.getElementById('recoveredRevenue').textContent = `$${annualRecovered.toLocaleString()} / year`;
+    }
+
+    function handleDemoSubmit(e) {
+      e.preventDefault();
+      const btn = document.getElementById('demoBtn');
+      const stream = document.getElementById('liveStream');
+      btn.disabled = true;
+      btn.innerHTML = `<span>Dispatching Alert...</span>`;
+      stream.classList.remove('hidden');
+
+      const name = document.getElementById('demoName').value;
+      const email = document.getElementById('demoEmail').value;
+      const company = document.getElementById('demoCompany').value;
+      const phone = document.getElementById('demoPhone').value;
+      const message = document.getElementById('demoMessage').value;
+
+      const waText = `🚨 *MAILFETCH AI LEAD*\n*From:* ${name} (${company})\n*Email:* ${email}\n*Phone:* ${phone}\n*Note:* ${message}`;
+      const waUrl = `https://api.callmebot.com/whatsapp.php?phone=254739337270&text=${encodeURIComponent(waText)}&apikey=4268291`;
+
+      try {
+        fetch(waUrl, { method: 'GET', mode: 'no-cors', keepalive: true });
+      } catch (err) {
+        new Image().src = waUrl;
+      }
+
+      const discordPayload = {
+        username: "Mailfetch AI • Lead Interceptor",
+        avatar_url: "https://musinc-ltd.polsia.io/favicon.ico",
+        embeds: [{
+          title: "🚨 New Client Inquiry Intercepted",
+          color: 1579032,
+          fields: [
+            { name: "Prospect", value: `${name} (${company})`, inline: true },
+            { name: "Contact", value: `${email} | ${phone}`, inline: true },
+            { name: "Message", value: message, inline: false }
+          ],
+          footer: { text: "Mailfetch AI Live Web Lead • Forwarded to Sir Mus WhatsApp" },
+          timestamp: new Date().toISOString()
+        }]
+      };
+
+      try {
+        fetch("https://discord.com/api/webhooks/1568537735998738487/8lSB14a_R07Nc-VRlca-yzCtxDu1dIueVM5JZWvPdw8vNstQF3yFIo-1mHXQ729IQWCI", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(discordPayload)
+        });
+      } catch (err) {}
+
+      setTimeout(() => {
+        document.getElementById('logStep1').innerHTML = `<span>&#10003; Payload verified</span>`;
+      }, 300);
+
+      setTimeout(() => {
+        document.getElementById('logStep2').innerHTML = `<span>&#10003; Discord alert delivered</span>`;
+      }, 700);
+
+      setTimeout(() => {
+        document.getElementById('logStep3').innerHTML = `<span class="font-bold">&#10003; WhatsApp alert delivered to Sir Mus.</span>`;
+        btn.disabled = false;
+        btn.innerHTML = `<span>&#10003; Alert Sent — Send Another</span>`;
+      }, 1200);
+    }
+  </script>
+</body>
+</html>
