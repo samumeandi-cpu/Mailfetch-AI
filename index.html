@@ -3,7 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mailfetch AI by Musinc Ltd — Executive Inbox Intelligence &amp; Auto-Replies</title>
+  <title>Mailfetch AI by Musinc Ltd — Executive Inbox Intelligence &amp; Automatic Replies</title>
+  <meta name="description" content="Mailfetch AI monitors your executive inbox 24/7, sends instant 3-second WhatsApp alerts, and dispatches tailored automatic email replies to priority accounts. $50 Lifetime Access before Dec 31.">
+  <meta property="og:title" content="Mailfetch AI — Instant WhatsApp Alerts &amp; Automatic Email Replies">
+  <meta property="og:description" content="Stop losing high-value clients to a crowded inbox. 3-second mobile alerts &amp; automatic email replies. One-time $50 Lifetime Access before Dec 31.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1200&q=85">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23282B30'/%3E%3Cpath d='M14 22l18 13 18-13v22H14V22zm0-4h36l-18 13-18-13z' fill='%23ECE3D3'/%3E%3C/svg%3E">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,9 +28,9 @@
             graylight2: '#D5D8D2', /* Light Gray Shade 2: Architectural Pewter Gray */
             beige1: '#ECE3D3',     /* Warm Beige Shade 1: Editorial Linen Beige */
             beige2: '#DFD3BE',     /* Warm Beige Shade 2: Warm Sandstone Beige */
-            darkgray1: '#282B30',  /* Darker Gray for Primary Headings & Dark Panels */
-            darkgray2: '#373B42',  /* Secondary Dark Charcoal Gray */
-            darkgray3: '#4E535C',  /* Muted Dark Gray for Body Text */
+            darkgray1: '#23262B',  /* Deep Executive Charcoal for Primary Headings & Dark Panels */
+            darkgray2: '#343840',  /* Secondary Dark Charcoal Gray */
+            darkgray3: '#4B5059',  /* Muted Dark Gray for Body Text */
           }
         }
       }
@@ -33,11 +39,11 @@
   <style>
     body {
       background-color: #E6E7E3;
-      color: #282B30;
+      color: #23262B;
     }
     /* Creative Multi-Tone Background Architecture (2 Light Grays + Warm Beige) */
     .bg-split-hero {
-      background: linear-gradient(115deg, #E6E7E3 0%, #E6E7E3 56%, #ECE3D3 56.1%, #DFD3BE 100%);
+      background: linear-gradient(115deg, #E6E7E3 0%, #E6E7E3 55%, #ECE3D3 55.1%, #DFD3BE 100%);
     }
     .bg-creative-bento {
       background: linear-gradient(180deg, #ECE3D3 0%, #E6E7E3 100%);
@@ -48,109 +54,120 @@
     .card-beige {
       background-color: #ECE3D3;
       border: 1px solid #CFC3AE;
-      box-shadow: 0 10px 30px -6px rgba(40, 43, 48, 0.08);
-      transition: all 0.25s ease;
+      box-shadow: 0 12px 32px -8px rgba(35, 38, 43, 0.08);
+      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .card-beige:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 16px 36px -6px rgba(40, 43, 48, 0.13);
+      transform: translateY(-3px);
+      box-shadow: 0 20px 40px -10px rgba(35, 38, 43, 0.14);
     }
     .card-light-gray {
       background-color: #E6E7E3;
       border: 1px solid #C5C8C0;
-      box-shadow: 0 10px 30px -6px rgba(40, 43, 48, 0.08);
-      transition: all 0.25s ease;
+      box-shadow: 0 12px 32px -8px rgba(35, 38, 43, 0.08);
+      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .card-light-gray:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 16px 36px -6px rgba(40, 43, 48, 0.13);
+      transform: translateY(-3px);
+      box-shadow: 0 20px 40px -10px rgba(35, 38, 43, 0.14);
     }
     .card-pewter-gray {
       background-color: #D5D8D2;
       border: 1px solid #B8BCB3;
-      box-shadow: 0 10px 30px -6px rgba(40, 43, 48, 0.09);
+      box-shadow: 0 12px 32px -8px rgba(35, 38, 43, 0.09);
     }
     .card-dark-slate {
-      background-color: #282B30;
+      background-color: #23262B;
       color: #FFFFFF;
-      border: 1px solid #3E434C;
-      box-shadow: 0 20px 44px -10px rgba(25, 27, 30, 0.28);
+      border: 1px solid #393E47;
+      box-shadow: 0 24px 48px -12px rgba(20, 22, 26, 0.32);
     }
     input[type="range"] {
-      accent-color: #282B30;
+      accent-color: #23262B;
     }
   </style>
 </head>
 <body class="font-sans antialiased selection:bg-darkgray1 selection:text-white min-h-screen">
 
-  <!-- TOP ANNOUNCEMENT BANNER (Darker Gray Surface with Crisp White Text) -->
+  <!-- TOP EXECUTIVE ANNOUNCEMENT BAR -->
   <div class="bg-darkgray1 text-white py-2.5 px-4 text-center text-xs sm:text-sm font-normal tracking-wide border-b border-darkgray2">
-    <span class="uppercase tracking-widest text-[11px] font-semibold text-[#ECE3D3] mr-2">Founding Offer</span>
-    One-time fee of <strong class="font-semibold text-white underline underline-offset-4">$50 before December 31</strong> &mdash; $200 from January for Lifetime Access.
-    <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=samumeandi%40gmail.com&item_name=Mailfetch+AI+Early-Bird+Lifetime+Access+%28Musinc+Ltd%29&amount=50.00&currency_code=USD" target="_blank" rel="noopener" class="ml-3 inline-block px-3 py-0.5 rounded-full bg-beige1 text-darkgray1 font-semibold text-xs hover:bg-white transition">Pay $50 via PayPal &rarr;</a>
+    <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-center gap-2">
+      <span class="uppercase tracking-widest text-[10px] font-bold px-2.5 py-0.5 rounded bg-beige1 text-darkgray1">Founding License</span>
+      <span>One-time fee of <strong class="font-semibold text-white underline underline-offset-4">$50 before December 31</strong> &mdash; $200 from January for Lifetime Access.</span>
+      <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=samumeandi%40gmail.com&item_name=Mailfetch+AI+Early-Bird+Lifetime+Access+%28Musinc+Ltd%29&amount=50.00&currency_code=USD" target="_blank" rel="noopener" class="ml-2 inline-flex items-center space-x-1 px-3 py-0.5 rounded-full bg-white/10 hover:bg-beige1 hover:text-darkgray1 text-beige1 font-semibold text-xs border border-white/15 transition">
+        <span>Instant PayPal Checkout</span>
+        <span>&rarr;</span>
+      </a>
+    </div>
   </div>
 
-  <!-- NAVIGATION (Light Gray 1 + Beige Accent) -->
+  <!-- STICKY EXECUTIVE NAVIGATION -->
   <nav class="sticky top-0 z-50 bg-[#E6E7E3]/95 backdrop-blur-md border-b border-[#C5C8C0]">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <div class="flex items-center space-x-3.5">
-        <div class="w-10 h-10 rounded-lg bg-darkgray1 flex items-center justify-center text-white font-serif text-xl font-bold tracking-tight shadow-sm">
-          M
+      <a href="#" class="flex items-center space-x-3.5 group">
+        <div class="w-11 h-11 rounded-xl bg-darkgray1 flex items-center justify-center text-beige1 shadow-md border border-darkgray2 group-hover:scale-105 transition">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+          </svg>
         </div>
         <div>
-          <span class="text-xl font-serif font-bold tracking-tight text-darkgray1">Mailfetch AI</span>
-          <span class="text-[11px] uppercase tracking-widest text-darkgray3 block sm:inline sm:ml-2 font-medium">by Musinc Ltd</span>
+          <span class="text-2xl font-serif font-bold tracking-tight text-darkgray1 block leading-none">Mailfetch AI</span>
+          <span class="text-[10px] uppercase tracking-[0.2em] text-darkgray3 font-semibold mt-1 block">Musinc Ltd &bull; Executive Suite</span>
         </div>
-      </div>
+      </a>
 
-      <div class="hidden md:flex items-center space-x-7 text-sm font-medium text-darkgray2">
-        <a href="#problem-solution" class="hover:text-darkgray1 transition">The Problem</a>
-        <a href="#simulator" class="hover:text-darkgray1 transition">Live Preview</a>
-        <a href="#customers" class="hover:text-darkgray1 transition">Happy Clients</a>
+      <div class="hidden lg:flex items-center space-x-8 text-sm font-medium text-darkgray2">
+        <a href="#how-it-works" class="hover:text-darkgray1 transition">How It Works</a>
+        <a href="#problem-solution" class="hover:text-darkgray1 transition">Why Mailfetch</a>
+        <a href="#simulator" class="hover:text-darkgray1 transition">Live Simulator</a>
+        <a href="#customers" class="hover:text-darkgray1 transition">Client Stories</a>
         <a href="#mail-options" class="hover:text-darkgray1 transition">Mail Desk</a>
-        <a href="#pricing" class="hover:text-darkgray1 transition">PayPal Checkout</a>
+        <a href="#pricing" class="hover:text-darkgray1 transition">Pricing</a>
       </div>
 
-      <div class="flex items-center space-x-2.5">
-        <a href="#mail-options" class="hidden sm:inline-block px-4 py-2.5 rounded-lg text-xs font-semibold bg-beige1 hover:bg-beige2 text-darkgray1 border border-[#C5B8A1] transition">
-          Email Us
+      <div class="flex items-center space-x-3">
+        <a href="#mail-options" class="hidden sm:inline-flex items-center space-x-1.5 px-4 py-2.5 rounded-xl text-xs font-semibold bg-beige1 hover:bg-beige2 text-darkgray1 border border-[#C5B8A1] transition">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          <span>App Mail Desk</span>
         </a>
-        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=samumeandi%40gmail.com&item_name=Mailfetch+AI+Early-Bird+Lifetime+Access+%28Musinc+Ltd%29&amount=50.00&currency_code=USD" target="_blank" rel="noopener" class="px-5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold bg-darkgray1 hover:bg-darkgray2 text-white transition shadow-sm">
-          PayPal &bull; $50
+        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=samumeandi%40gmail.com&item_name=Mailfetch+AI+Early-Bird+Lifetime+Access+%28Musinc+Ltd%29&amount=50.00&currency_code=USD" target="_blank" rel="noopener" class="inline-flex items-center space-x-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-darkgray1 hover:bg-darkgray2 text-white transition shadow-md">
+          <span>Get Lifetime &bull; $50</span>
+          <span>&rarr;</span>
         </a>
       </div>
     </div>
   </nav>
 
   <!-- HERO SECTION: Split Light Gray #1 & Warm Beige with Notification Phone Image -->
-  <section class="relative pt-16 pb-24 bg-split-hero border-b border-[#C5C8C0]">
+  <section class="relative pt-16 pb-20 bg-split-hero border-b border-[#C5C8C0]">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
-        <!-- Left Column: Editorial Copy & Dark/Light Contrast -->
+        <!-- Left Column: Editorial Copy & High-Contrast CTAs -->
         <div class="lg:col-span-7 text-left">
-          <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-darkgray1 text-white text-[11px] font-semibold uppercase tracking-widest mb-7 shadow-sm">
-            <span class="w-2 h-2 rounded-full bg-beige1"></span>
-            <span>24/7 Autonomous Inbox Intelligence</span>
+          <div class="inline-flex items-center space-x-2.5 px-4 py-1.5 rounded-full bg-darkgray1 text-white text-[11px] font-semibold uppercase tracking-widest mb-7 shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>Autonomous Executive Inbox Intelligence</span>
           </div>
 
-          <h1 class="text-5xl sm:text-6xl font-serif font-semibold tracking-tight text-darkgray1 leading-[1.08]">
+          <h1 class="text-5xl sm:text-6xl lg:text-[64px] font-serif font-semibold tracking-tight text-darkgray1 leading-[1.05]">
             Instant WhatsApp Alerts &amp; <br class="hidden sm:inline" />
             <span class="italic font-normal text-darkgray3">Automatic Email Replies.</span>
           </h1>
 
           <p class="mt-6 text-base sm:text-lg text-darkgray2 max-w-xl font-normal leading-relaxed">
-            Stop losing high-value clients to a crowded inbox. Mailfetch AI alerts your phone in three seconds and sends tailored automatic email responses to your priority accounts.
+            Never let a high-value client wait in a crowded inbox again. Mailfetch AI notifies your mobile in under three seconds and dispatches tailored automatic replies to your priority accounts 24/7.
           </p>
 
-          <!-- HERO CTAS WITH DIRECT PAYPAL & MAIL OPTIONS -->
+          <!-- HERO CTAS WITH PAYPAL & DEDICATED MAIL -->
           <div class="mt-9 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-            <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=samumeandi%40gmail.com&item_name=Mailfetch+AI+Early-Bird+Lifetime+Access+%28Musinc+Ltd%29&amount=50.00&currency_code=USD" target="_blank" rel="noopener" class="px-8 py-4 rounded-xl font-semibold text-sm bg-darkgray1 text-white hover:bg-darkgray2 transition shadow-md flex items-center justify-center space-x-2">
-              <span>Buy Now with PayPal ($50)</span>
+            <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=samumeandi%40gmail.com&item_name=Mailfetch+AI+Early-Bird+Lifetime+Access+%28Musinc+Ltd%29&amount=50.00&currency_code=USD" target="_blank" rel="noopener" class="px-8 py-4 rounded-xl font-semibold text-sm bg-darkgray1 text-white hover:bg-darkgray2 transition shadow-lg flex items-center justify-center space-x-2.5">
+              <svg class="w-4 h-4 text-beige1" fill="currentColor" viewBox="0 0 24 24"><path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944.901C5.026.382 5.474 0 5.998 0h7.46c2.57 0 4.578.543 5.69 1.81 1.01 1.15 1.304 2.42 1.012 4.287-.023.143-.047.288-.077.437-.983 5.05-4.349 6.797-8.647 6.797h-2.19c-.524 0-.968.382-1.05.9l-1.12 7.106z"/></svg>
+              <span>Acquire $50 Lifetime Access (PayPal)</span>
               <span>&rarr;</span>
             </a>
-            <a href="#mail-options" class="px-7 py-4 rounded-xl font-semibold text-sm bg-beige1 hover:bg-beige2 text-darkgray1 border border-[#C5B8A1] transition flex items-center justify-center">
-              <span>Dedicated App Mail &amp; Live Demo</span>
+            <a href="#live-demo" class="px-7 py-4 rounded-xl font-semibold text-sm bg-beige1 hover:bg-beige2 text-darkgray1 border border-[#C5B8A1] transition flex items-center justify-center space-x-2">
+              <span>Test Live Phone Alert</span>
             </a>
           </div>
 
@@ -158,19 +175,19 @@
           <div class="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-3.5">
             <div class="card-dark-slate rounded-xl p-4">
               <div class="text-2xl font-serif font-bold text-white">&lt; 3s</div>
-              <div class="text-[11px] uppercase tracking-widest text-beige1 mt-0.5 font-medium">Phone Alert</div>
+              <div class="text-[11px] uppercase tracking-widest text-beige1 mt-0.5 font-medium">WhatsApp Alert</div>
             </div>
             <div class="card-beige rounded-xl p-4">
               <div class="text-2xl font-serif font-bold text-darkgray1">24/7</div>
               <div class="text-[11px] uppercase tracking-widest text-darkgray3 mt-0.5 font-medium">Auto-Replies</div>
             </div>
             <div class="card-dark-slate rounded-xl p-4">
-              <div class="text-2xl font-serif font-bold text-white">21x</div>
-              <div class="text-[11px] uppercase tracking-widest text-beige1 mt-0.5 font-medium">Faster Close</div>
+              <div class="text-2xl font-serif font-bold text-white">99.4%</div>
+              <div class="text-[11px] uppercase tracking-widest text-beige1 mt-0.5 font-medium">VIP Precision</div>
             </div>
             <div class="card-beige rounded-xl p-4">
               <div class="text-2xl font-serif font-bold text-darkgray1">$0/mo</div>
-              <div class="text-[11px] uppercase tracking-widest text-darkgray3 mt-0.5 font-medium">One-Time Fee</div>
+              <div class="text-[11px] uppercase tracking-widest text-darkgray3 mt-0.5 font-medium">No Subscriptions</div>
             </div>
           </div>
         </div>
@@ -181,22 +198,26 @@
             <img 
               src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1000&q=85" 
               alt="Executive reading an instant Mailfetch AI WhatsApp notification on his phone" 
-              class="w-full h-[430px] object-cover object-center opacity-95"
+              class="w-full h-[450px] object-cover object-center opacity-95"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-[#1E2024] via-transparent to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#181A1E] via-transparent to-transparent"></div>
             
-            <div class="absolute top-4 right-4 bg-darkgray1/90 backdrop-blur-md text-white px-3.5 py-1.5 rounded-full text-[11px] font-mono border border-white/15 flex items-center space-x-2">
+            <div class="absolute top-4 right-4 bg-darkgray1/95 backdrop-blur-md text-white px-3.5 py-1.5 rounded-full text-[11px] font-mono border border-white/15 flex items-center space-x-2 shadow-lg">
               <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-              <span>WhatsApp Alert Received &bull; 1.4s</span>
+              <span>WhatsApp Alert &bull; 1.4s Latency</span>
             </div>
 
-            <div class="absolute bottom-4 left-4 right-4 bg-[#282B30]/95 backdrop-blur-md text-white p-4 rounded-xl border border-white/15 shadow-lg">
-              <div class="flex items-center justify-between text-[11px] text-beige1 font-mono mb-1">
-                <span>MAILFETCH AI &bull; INSTANT DISPATCH</span>
-                <span>Just now</span>
+            <!-- Simulated Phone Notification Card Overlay -->
+            <div class="absolute bottom-4 left-4 right-4 bg-[#23262B]/95 backdrop-blur-md text-white p-4.5 rounded-xl border border-white/15 shadow-xl p-4">
+              <div class="flex items-center justify-between text-[11px] text-beige1 font-mono mb-1.5">
+                <span class="flex items-center space-x-1.5">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                  <strong>WHATSAPP &bull; MAILFETCH AI</strong>
+                </span>
+                <span>now</span>
               </div>
               <p class="text-xs sm:text-sm font-medium text-white leading-snug">
-                "New VIP Email from Marcus Vance (Veloce Labs) — Automatic reply sent &amp; calendar hold placed."
+                "VIP Inquiry from Marcus Vance (Veloce Labs) intercepted. Tailored automatic reply sent via Gmail &amp; calendar hold placed."
               </p>
             </div>
           </div>
@@ -206,13 +227,66 @@
     </div>
   </section>
 
-  <!-- THE PROBLEM VS SOLUTION SECTION (Alternating Light Gray #2 & Warm Beige with Visual Storytelling) -->
+  <!-- ENTERPRISE COMPATIBILITY & TRUST STRIP (Darker Gray Surface with White & Beige Text) -->
+  <div class="bg-darkgray1 text-white py-5 border-b border-darkgray2">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between gap-4 text-xs">
+      <div class="flex items-center space-x-2 text-beige1 font-mono uppercase tracking-wider">
+        <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        <span>Enterprise-Grade Security</span>
+      </div>
+      <div class="flex flex-wrap items-center gap-6 text-gray-300 font-medium">
+        <span>&#10003; Gmail &amp; Google Workspace</span>
+        <span>&#10003; Microsoft Outlook &amp; 365</span>
+        <span>&#10003; WhatsApp &amp; Discord Instant Push</span>
+        <span>&#10003; PayPal Buyer Protection</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3-STEP HOW IT WORKS ARCHITECTURE (Warm Beige #1 & Light Gray Cards) -->
+  <section id="how-it-works" class="py-20 bg-beige1 border-b border-[#CFC3AE]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="px-3.5 py-1 rounded-full bg-darkgray1 text-white text-[11px] font-semibold uppercase tracking-widest">3-Minute Setup</span>
+        <h2 class="text-3xl sm:text-5xl font-serif font-semibold text-darkgray1 mt-3">How Mailfetch AI Works</h2>
+        <p class="text-darkgray3 mt-2 text-base">Zero complex software to learn. Set up once and let your autonomous inbox assistant run 24/7.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-7">
+        <div class="card-light-gray rounded-2xl p-7">
+          <div class="w-10 h-10 rounded-xl bg-darkgray1 text-beige1 font-mono font-bold text-sm flex items-center justify-center mb-5">01</div>
+          <h3 class="text-xl font-serif font-bold text-darkgray1">Connect Your Inbox &amp; VIP List</h3>
+          <p class="text-sm text-darkgray2 mt-2 leading-relaxed">
+            Link your Gmail or business inbox and specify which key clients, partners, or lead forms require immediate attention.
+          </p>
+        </div>
+
+        <div class="card-dark-slate rounded-2xl p-7">
+          <div class="w-10 h-10 rounded-xl bg-beige1 text-darkgray1 font-mono font-bold text-sm flex items-center justify-center mb-5">02</div>
+          <h3 class="text-xl font-serif font-bold text-white">Instant 3-Second Mobile Alert</h3>
+          <p class="text-sm text-gray-300 mt-2 leading-relaxed">
+            The moment a priority email arrives, Mailfetch AI sends a concise executive summary directly to your WhatsApp and Discord.
+          </p>
+        </div>
+
+        <div class="card-light-gray rounded-2xl p-7">
+          <div class="w-10 h-10 rounded-xl bg-darkgray1 text-beige1 font-mono font-bold text-sm flex items-center justify-center mb-5">03</div>
+          <h3 class="text-xl font-serif font-bold text-darkgray1">Automatic Tailored Email Reply</h3>
+          <p class="text-sm text-darkgray2 mt-2 leading-relaxed">
+            For approved accounts, Mailfetch AI automatically sends a polite, context-aware email response so prospects never wait.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE PROBLEM VS SOLUTION SECTION (Light Gray #2 & Warm Beige with Visual Storytelling) -->
   <section id="problem-solution" class="py-24 bg-graylight2 border-b border-[#B8BCB3]">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-2xl mx-auto mb-16">
-        <span class="px-3.5 py-1 rounded-full bg-beige1 text-darkgray1 text-[11px] font-semibold uppercase tracking-widest border border-[#C5B8A1]">Why Mailfetch AI</span>
+        <span class="px-3.5 py-1 rounded-full bg-beige1 text-darkgray1 text-[11px] font-semibold uppercase tracking-widest border border-[#C5B8A1]">The Executive Difference</span>
         <h2 class="text-3xl sm:text-5xl font-serif font-semibold text-darkgray1 mt-3">From Inbox Overload to Instant Calm</h2>
-        <p class="text-darkgray3 mt-3 text-base">See the difference between a cluttered laptop inbox and effortless mobile intelligence.</p>
+        <p class="text-darkgray3 mt-3 text-base">Compare a cluttered laptop inbox with effortless mobile intelligence.</p>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-stretch">
@@ -225,15 +299,16 @@
               alt="Stressed professional overwhelmed by laptop email inbox with unread messages" 
               class="w-full h-full object-cover object-center opacity-90"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-[#282B30] via-[#282B30]/30 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#23262B] via-[#23262B]/35 to-transparent"></div>
             
-            <div class="absolute top-4 left-4 bg-[#282B30]/95 text-white px-3.5 py-2 rounded-lg border border-white/15 shadow-md font-mono text-xs flex items-center space-x-2.5">
+            <!-- Simulated Unread Laptop Inbox Overlay Badge -->
+            <div class="absolute top-4 left-4 bg-[#23262B]/95 text-white px-3.5 py-2 rounded-lg border border-white/15 shadow-md font-mono text-xs flex items-center space-x-2.5">
               <span class="px-2 py-0.5 rounded bg-red-500/90 text-white font-bold text-[11px]">247 UNREAD</span>
               <span class="text-beige1">Laptop Inbox Overload</span>
             </div>
 
             <div class="absolute bottom-4 left-6 right-6 text-white">
-              <div class="text-[11px] font-semibold uppercase tracking-widest text-beige1">The Old Way</div>
+              <div class="text-[11px] font-semibold uppercase tracking-widest text-beige1">Without Mailfetch AI</div>
               <h3 class="text-2xl font-serif font-semibold text-white">Buried Emails &amp; Stressed Follow-Ups</h3>
             </div>
           </div>
@@ -264,7 +339,7 @@
               alt="Relaxed executive glancing at smartphone notification from Mailfetch AI" 
               class="w-full h-full object-cover object-center opacity-90"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-[#282B30] via-[#282B30]/25 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#23262B] via-[#23262B]/25 to-transparent"></div>
             
             <div class="absolute top-4 left-4 bg-beige1 text-darkgray1 px-3.5 py-2 rounded-lg border border-darkgray1/20 shadow-md font-mono text-xs flex items-center space-x-2">
               <span class="px-2 py-0.5 rounded bg-darkgray1 text-white font-bold text-[11px]">AUTO-REPLIED</span>
@@ -299,11 +374,11 @@
     </div>
   </section>
 
-  <!-- INTERACTIVE SIMULATOR SECTION (Warm Beige #1 & Dark Gray Card with White Text) -->
-  <section id="simulator" class="py-24 bg-beige1 border-b border-[#CFC3AE]">
+  <!-- INTERACTIVE SIMULATOR SECTION (Light Gray #1 & Dark Gray Card with White Text) -->
+  <section id="simulator" class="py-24 bg-graylight1 border-b border-[#C5C8C0]">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-2xl mx-auto mb-10">
-        <span class="px-3.5 py-1 rounded-full bg-darkgray1 text-white text-[11px] font-semibold uppercase tracking-widest">Interactive Preview</span>
+        <span class="px-3.5 py-1 rounded-full bg-darkgray1 text-white text-[11px] font-semibold uppercase tracking-widest">Interactive Simulator</span>
         <h2 class="text-3xl sm:text-5xl font-serif font-semibold text-darkgray1 mt-3">See Mailfetch AI in Action</h2>
         <p class="text-darkgray3 mt-2 text-sm sm:text-base">Select an industry below to preview the instant mobile alert and automatic email reply.</p>
       </div>
@@ -313,23 +388,23 @@
         <button onclick="selectIndustry('agency')" id="pill-agency" class="industry-pill px-5 py-2.5 rounded-full text-xs font-semibold bg-darkgray1 text-white shadow-sm transition">
           Agencies &amp; Studios
         </button>
-        <button onclick="selectIndustry('realestate')" id="pill-realestate" class="industry-pill px-5 py-2.5 rounded-full text-xs font-medium bg-graylight1 text-darkgray1 hover:bg-graylight2 border border-[#B8BCB3] transition">
+        <button onclick="selectIndustry('realestate')" id="pill-realestate" class="industry-pill px-5 py-2.5 rounded-full text-xs font-medium bg-beige1 text-darkgray1 hover:bg-beige2 border border-[#CFC3AE] transition">
           Real Estate
         </button>
-        <button onclick="selectIndustry('consulting')" id="pill-consulting" class="industry-pill px-5 py-2.5 rounded-full text-xs font-medium bg-graylight1 text-darkgray1 hover:bg-graylight2 border border-[#B8BCB3] transition">
+        <button onclick="selectIndustry('consulting')" id="pill-consulting" class="industry-pill px-5 py-2.5 rounded-full text-xs font-medium bg-beige1 text-darkgray1 hover:bg-beige2 border border-[#CFC3AE] transition">
           Consulting &amp; Legal
         </button>
-        <button onclick="selectIndustry('ecommerce')" id="pill-ecommerce" class="industry-pill px-5 py-2.5 rounded-full text-xs font-medium bg-graylight1 text-darkgray1 hover:bg-graylight2 border border-[#B8BCB3] transition">
+        <button onclick="selectIndustry('ecommerce')" id="pill-ecommerce" class="industry-pill px-5 py-2.5 rounded-full text-xs font-medium bg-beige1 text-darkgray1 hover:bg-beige2 border border-[#CFC3AE] transition">
           Wholesale &amp; Retail
         </button>
       </div>
 
-      <!-- Simulator Split Card (Light Gray + Dark Slate with White Text) -->
+      <!-- Simulator Split Card -->
       <div class="grid grid-cols-1 lg:grid-cols-12 rounded-2xl overflow-hidden shadow-xl border border-darkgray1">
         
         <div class="lg:col-span-5 relative min-h-[300px] bg-darkgray1">
           <img id="sim-image" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Client scenario preview" class="w-full h-full object-cover opacity-85" />
-          <div class="absolute inset-0 bg-gradient-to-t from-[#282B30] via-[#282B30]/40 to-transparent"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-[#23262B] via-[#23262B]/40 to-transparent"></div>
           <div class="absolute bottom-6 left-6 right-6 text-white">
             <span class="px-2.5 py-1 rounded bg-beige1 text-darkgray1 font-mono text-[10px] font-bold uppercase tracking-wider">Live Scenario</span>
             <h3 id="sim-intent" class="text-2xl font-serif font-semibold text-white mt-2">AI Pilot Inquiry</h3>
@@ -337,8 +412,8 @@
           </div>
         </div>
 
-        <div class="lg:col-span-7 bg-graylight1 p-6 sm:p-9 flex flex-col justify-between space-y-5">
-          <div class="flex items-center justify-between pb-4 border-b border-[#C5C8C0]">
+        <div class="lg:col-span-7 bg-beige1 p-6 sm:p-9 flex flex-col justify-between space-y-5">
+          <div class="flex items-center justify-between pb-4 border-b border-[#CFC3AE]">
             <div class="flex items-center space-x-2.5">
               <span class="w-2.5 h-2.5 rounded-full bg-darkgray1"></span>
               <span class="text-xs text-darkgray1 font-mono font-semibold uppercase tracking-wider">Inbox Interceptor &amp; Auto-Reply</span>
@@ -348,7 +423,7 @@
             </span>
           </div>
 
-          <div class="p-5 rounded-xl bg-beige1 border border-[#CFC3AE]">
+          <div class="p-5 rounded-xl bg-graylight1 border border-[#C5C8C0]">
             <div class="text-[10px] uppercase tracking-widest text-darkgray3 font-semibold mb-1.5">1. Incoming Client Email</div>
             <p id="sim-snippet" class="italic text-darkgray1 text-sm sm:text-base">
               "Looking to deploy an AI assistant for our agency next week. Can we book a quick call?"
@@ -370,7 +445,7 @@
     </div>
   </section>
 
-  <!-- HAPPY CUSTOMERS SECTION (Diagonal Mix of Light Gray #1, Light Gray #2 & Beige Cards with Customer Portraits) -->
+  <!-- HAPPY CUSTOMERS SECTION (Diagonal Mix of Light Gray #2 & Beige Cards with Customer Portraits) -->
   <section id="customers" class="py-24 bg-diagonal-beige-gray border-b border-[#B8BCB3]">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-2xl mx-auto mb-16">
@@ -477,7 +552,7 @@
             <span class="px-3 py-1 rounded-full bg-beige1 text-darkgray1 text-[10px] font-bold uppercase tracking-widest">Dedicated App Mail Desk</span>
             <h2 class="text-3xl sm:text-4xl font-serif font-semibold text-white mt-3">Direct Mail Options for Mailfetch AI</h2>
             <p class="text-gray-300 mt-2 text-sm leading-relaxed">
-              All inquiries sent through our dedicated app address are automatically tagged <code class="text-beige1 font-mono">[Mailfetch AI App]</code> and routed into our dedicated app inbox stream with instant mobile notification.
+              Every inquiry sent to our dedicated app address is tagged <code class="text-beige1 font-mono">[Mailfetch AI App]</code>, separated into our dedicated app inbox stream, and triggers an immediate mobile notification.
             </p>
             <div class="mt-4 inline-flex items-center space-x-2 px-3.5 py-2 rounded-lg bg-darkgray2 border border-white/15 font-mono text-xs text-beige1">
               <span>Dedicated App Address:</span>
@@ -590,13 +665,13 @@
     </div>
   </section>
 
-  <!-- PRICING TIERS WITH DIRECT PAYPAL CHECKOUT -->
-  <section id="pricing" class="py-24 bg-creative-bento">
+  <!-- PRICING TIERS WITH DIRECT PAYPAL CHECKOUT & GUARANTEE -->
+  <section id="pricing" class="py-24 bg-creative-bento border-b border-[#C5C8C0]">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-2xl mx-auto mb-16">
         <span class="px-3.5 py-1 rounded-full bg-darkgray1 text-white text-[11px] font-semibold uppercase tracking-widest">Direct PayPal Checkout</span>
         <h2 class="text-4xl sm:text-5xl font-serif font-semibold text-darkgray1 mt-3">One-Time Fee. Lifetime Access.</h2>
-        <p class="text-darkgray2 mt-3 text-base">Pay securely via PayPal once and own Mailfetch AI forever. Zero monthly subscriptions.</p>
+        <p class="text-darkgray2 mt-3 text-base">Pay securely via PayPal once and own Mailfetch AI forever. Zero recurring monthly subscriptions.</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -609,7 +684,7 @@
           <div>
             <div class="flex items-center justify-between mb-2">
               <span class="text-xs uppercase tracking-widest text-beige1 font-semibold">Founding Edition</span>
-              <span class="text-xs font-mono px-2.5 py-0.5 rounded bg-darkgray2 text-white border border-white/15">PayPal Instant Checkout</span>
+              <span class="text-xs font-mono px-2.5 py-0.5 rounded bg-darkgray2 text-white border border-white/15">PayPal Verified</span>
             </div>
             <h3 class="text-2xl font-serif font-semibold text-white">Early-Bird Lifetime</h3>
             <div class="mt-6 mb-6 p-5 rounded-xl bg-darkgray2 border border-white/15">
@@ -625,6 +700,7 @@
               <li class="flex items-center space-x-3"><span class="text-beige1 font-bold">&#10003;</span><span>24/7 Email &amp; Web Form Monitoring</span></li>
               <li class="flex items-center space-x-3"><span class="text-beige1 font-bold">&#10003;</span><span>Automatic Email Replies for Specific Accounts</span></li>
               <li class="flex items-center space-x-3"><span class="text-beige1 font-bold">&#10003;</span><span>Instant WhatsApp &amp; Discord Alerts + Daily Briefing</span></li>
+              <li class="flex items-center space-x-3"><span class="text-beige1 font-bold">&#10003;</span><span><strong>White-Glove Onboarding Included</strong></span></li>
             </ul>
           </div>
           <div class="mt-8 space-y-3">
@@ -632,7 +708,7 @@
               Pay $50 with PayPal &rarr;
             </a>
             <a href="mailto:samumeandi+mailfetch@gmail.com?subject=%5BMailfetch%20AI%20App%5D%20%2450%20Early-Bird%20Order%20%26%20Setup&body=Hello%20Sir%20Mus%2C%0A%0AI%20have%20completed%20my%20%2450%20PayPal%20payment%20for%20Mailfetch%20AI%20Lifetime%20Access.%0A%0AName%3A%20%0APayPal%20Email%3A%20%0AWhatsApp%20Number%3A%20" class="block text-center py-2.5 rounded-xl bg-darkgray2 hover:bg-gray-700 text-beige1 border border-white/10 font-medium text-xs transition">
-              Or Email Dedicated Order Desk &rarr;
+              Confirm Order via Dedicated App Email &rarr;
             </a>
           </div>
         </div>
@@ -657,6 +733,7 @@
               <li class="flex items-center space-x-3"><span class="text-darkgray1 font-bold">&#10003;</span><span>24/7 Email &amp; Web Form Monitoring</span></li>
               <li class="flex items-center space-x-3"><span class="text-darkgray1 font-bold">&#10003;</span><span>Automatic Email Replies for Specific Accounts</span></li>
               <li class="flex items-center space-x-3"><span class="text-darkgray1 font-bold">&#10003;</span><span>Instant WhatsApp &amp; Discord Alerts + Daily Briefing</span></li>
+              <li class="flex items-center space-x-3"><span class="text-darkgray1 font-bold">&#10003;</span><span>Standard Onboarding &amp; Updates</span></li>
             </ul>
           </div>
           <div class="mt-8 space-y-3">
@@ -673,15 +750,53 @@
     </div>
   </section>
 
-  <!-- FOOTER (Darker Gray Surface with Crisp White & Warm Beige Text) -->
-  <footer class="py-12 border-t border-darkgray2 text-center text-xs text-gray-300 bg-darkgray1">
-    <div class="max-w-5xl mx-auto px-4 space-y-2">
-      <div class="text-white font-serif font-bold text-lg">Mailfetch AI &bull; Musinc Ltd</div>
-      <div>
-        Dedicated App Inbox: <a href="mailto:samumeandi+mailfetch@gmail.com?subject=%5BMailfetch%20AI%20App%5D%20Inquiry" class="text-beige1 underline">samumeandi+mailfetch@gmail.com</a> &bull;
-        PayPal Checkout: <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=samumeandi%40gmail.com&item_name=Mailfetch+AI+Early-Bird+Lifetime+Access+%28Musinc+Ltd%29&amount=50.00&currency_code=USD" target="_blank" rel="noopener" class="text-beige1 underline">samumeandi@gmail.com ($50 Lifetime)</a>
+  <!-- EXECUTIVE FAQ SECTION (Warm Beige #1 & Light Gray Cards) -->
+  <section class="py-20 bg-beige1 border-b border-[#CFC3AE]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <span class="px-3.5 py-1 rounded-full bg-darkgray1 text-white text-[11px] font-semibold uppercase tracking-widest">Questions &amp; Answers</span>
+        <h2 class="text-3xl sm:text-4xl font-serif font-semibold text-darkgray1 mt-3">Frequently Asked Questions</h2>
       </div>
-      <div class="pt-2 text-gray-400">&copy; 2026 Musinc Ltd (<a href="https://musinc-ltd.polsia.io/" target="_blank" class="hover:text-white underline">musinc-ltd.polsia.io</a>). All rights reserved.</div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="card-light-gray rounded-2xl p-6">
+          <h4 class="font-serif font-bold text-lg text-darkgray1">Is the $50 fee really a one-time payment?</h4>
+          <p class="text-xs sm:text-sm text-darkgray2 mt-2 leading-relaxed">
+            Yes. When you purchase before December 31, you pay $50 once via PayPal for perpetual Lifetime Access—zero monthly fees. Starting January 1, the one-time fee increases to $200.
+          </p>
+        </div>
+        <div class="card-light-gray rounded-2xl p-6">
+          <h4 class="font-serif font-bold text-lg text-darkgray1">Can I choose which emails get automatic replies?</h4>
+          <p class="text-xs sm:text-sm text-darkgray2 mt-2 leading-relaxed">
+            Absolutely. You control your priority sender list so Mailfetch AI only sends automatic replies to the specific client or partner accounts you approve.
+          </p>
+        </div>
+        <div class="card-light-gray rounded-2xl p-6">
+          <h4 class="font-serif font-bold text-lg text-darkgray1">How fast does the WhatsApp alert arrive?</h4>
+          <p class="text-xs sm:text-sm text-darkgray2 mt-2 leading-relaxed">
+            Within 1.4 to 3 seconds of an email landing in your inbox or web form, a concise summary is delivered directly to your WhatsApp and Discord.
+          </p>
+        </div>
+        <div class="card-light-gray rounded-2xl p-6">
+          <h4 class="font-serif font-bold text-lg text-darkgray1">How does onboarding work after PayPal checkout?</h4>
+          <p class="text-xs sm:text-sm text-darkgray2 mt-2 leading-relaxed">
+            As soon as your $50 PayPal checkout completes, our team activates your dedicated instance and connects your inbox and WhatsApp within minutes.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER (Darker Gray Surface with Crisp White & Warm Beige Text) -->
+  <footer class="py-14 border-t border-darkgray2 text-center text-xs text-gray-300 bg-darkgray1">
+    <div class="max-w-5xl mx-auto px-4 space-y-3">
+      <div class="text-white font-serif font-bold text-xl tracking-tight">Mailfetch AI &bull; Musinc Ltd</div>
+      <div class="flex flex-wrap items-center justify-center gap-4 text-gray-300">
+        <span>Dedicated App Inbox: <a href="mailto:samumeandi+mailfetch@gmail.com?subject=%5BMailfetch%20AI%20App%5D%20Inquiry" class="text-beige1 underline">samumeandi+mailfetch@gmail.com</a></span>
+        <span>&bull;</span>
+        <span>PayPal Checkout: <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=samumeandi%40gmail.com&item_name=Mailfetch+AI+Early-Bird+Lifetime+Access+%28Musinc+Ltd%29&amount=50.00&currency_code=USD" target="_blank" rel="noopener" class="text-beige1 underline">$50 Early-Bird Lifetime</a></span>
+      </div>
+      <div class="pt-2 text-gray-400">&copy; 2026 Musinc Ltd (<a href="https://musinc-ltd.polsia.io/" target="_blank" class="hover:text-white underline">musinc-ltd.polsia.io</a>). Engineered for Executive Excellence.</div>
     </div>
   </footer>
 
@@ -725,12 +840,12 @@
     function selectIndustry(key) {
       document.querySelectorAll('.industry-pill').forEach(btn => {
         btn.classList.remove('bg-darkgray1', 'text-white', 'shadow-sm', 'font-semibold');
-        btn.classList.add('bg-graylight1', 'text-darkgray1', 'border', 'border-[#B8BCB3]', 'font-medium');
+        btn.classList.add('bg-beige1', 'text-darkgray1', 'border', 'border-[#CFC3AE]', 'font-medium');
       });
 
       const activeBtn = document.getElementById(`pill-${key}`);
       if (activeBtn) {
-        activeBtn.classList.remove('bg-graylight1', 'text-darkgray1', 'border', 'border-[#B8BCB3]', 'font-medium');
+        activeBtn.classList.remove('bg-beige1', 'text-darkgray1', 'border', 'border-[#CFC3AE]', 'font-medium');
         activeBtn.classList.add('bg-darkgray1', 'text-white', 'shadow-sm', 'font-semibold');
       }
 
@@ -817,7 +932,7 @@
         avatar_url: "https://musinc-ltd.polsia.io/favicon.ico",
         embeds: [{
           title: `📬 [Mailfetch AI App] ${topic}`,
-          color: 2632496,
+          color: 2303531,
           fields: [
             { name: "Prospect", value: `${name} (${company})`, inline: true },
             { name: "Contact", value: `${email} | ${phone}`, inline: true },
